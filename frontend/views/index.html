@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordMaster - Học tiếng Anh thông minh</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <!-- Header sẽ được load bằng JS -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section với hiệu ứng parallax -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-3 fw-bold text-white mb-4 animate__animated animate__fadeInDown">Thông thạo tiếng Anh chỉ sau 30 ngày</h1>
+            <p class="lead text-white mb-5 animate__animated animate__fadeIn animate__delay-1s">Phương pháp học flashcard thông minh giúp ghi nhớ từ vựng nhanh gấp 3 lần</p>
+            <div class="d-flex flex-wrap gap-3 animate__animated animate__fadeIn animate__delay-2s">
+              <a href="/auth/register.html" class="btn btn-light btn-lg px-4 py-3 rounded-pill fw-bold">
+                <i class="fas fa-rocket me-2"></i>Bắt đầu ngay
+              </a>
+              <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill fw-bold">
+                <i class="fas fa-play-circle me-2"></i>Xem demo
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-phone-mockup animate__animated animate__fadeInRight">
+              <div class="phone-screen">
+                <div class="flashcard-demo">
+                  <div class="flashcard-demo-front">
+                    <h3>Serendipity</h3>
+                    <button class="btn-audio">
+                      <i class="fas fa-volume-up"></i>
+                    </button>
+                  </div>
+                  <div class="flashcard-demo-back">
+                    <h4>/ˌser.ənˈdɪp.ə.ti/</h4>
+                    <p>Sự tình cờ may mắn</p>
+                    <small>"Meeting you was pure serendipity"</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-down">
+        <a href="#features" class="text-white">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="stats-section py-5 bg-light">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-3">
+            <div class="stat-item p-4 rounded-4 shadow-sm">
+              <h2 class="display-4 fw-bold text-primary">10,000+</h2>
+              <p class="mb-0">Từ vựng chất lượng</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item p-4 rounded-4 shadow-sm">
+              <h2 class="display-4 fw-bold text-primary">98%</h2>
+              <p class="mb-0">Người dùng hài lòng</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item p-4 rounded-4 shadow-sm">
+              <h2 class="display-4 fw-bold text-primary">3X</h2>
+              <p class="mb-0">Hiệu quả ghi nhớ</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item p-4 rounded-4 shadow-sm">
+              <h2 class="display-4 fw-bold text-primary">24/7</h2>
+              <p class="mb-0">Học mọi lúc mọi nơi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section với tabs interactive -->
+    <section id="features" class="features-section py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Công cụ học tập toàn diện</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px;">WordMaster cung cấp mọi thứ bạn cần để thành thạo tiếng Anh</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="pe-lg-5">
+              <ul class="nav nav-pills mb-4" id="features-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="flashcards-tab" data-bs-toggle="pill" data-bs-target="#flashcards" type="button">
+                    <i class="fas fa-layer-group me-2"></i>Flashcards
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pronunciation-tab" data-bs-toggle="pill" data-bs-target="#pronunciation" type="button">
+                    <i class="fas fa-volume-up me-2"></i>Phát âm
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="progress-tab" data-bs-toggle="pill" data-bs-target="#progress" type="button">
+                    <i class="fas fa-chart-line me-2"></i>Theo dõi tiến độ
+                  </button>
+                </li>
+              </ul>
+              
+              <div class="tab-content" id="features-tabContent">
+                <div class="tab-pane fade show active" id="flashcards" role="tabpanel">
+                  <h3 class="h2 fw-bold mb-3">Hệ thống Flashcard thông minh</h3>
+                  <p class="lead">Học từ vựng theo phương pháp khoa học, lặp lại ngắt quãng giúp ghi nhớ lâu dài.</p>
+                  <ul class="feature-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Phân loại theo chủ đề, cấp độ</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Hình ảnh minh họa sinh động</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Ví dụ thực tế, ngữ cảnh rõ ràng</li>
+                  </ul>
+                  <a href="/flashcard/list.html" class="btn btn-primary mt-3 px-4">Khám phá ngay</a>
+                </div>
+                
+                <div class="tab-pane fade" id="pronunciation" role="tabpanel">
+                  <h3 class="h2 fw-bold mb-3">Luyện phát âm chuẩn bản xứ</h3>
+                  <p class="lead">Công nghệ AI nhận diện giọng nói và đánh giá phát âm của bạn.</p>
+                  <ul class="feature-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> So sánh với người bản xứ</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Phân tích lỗi chi tiết</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Luyện tập theo cấp độ</li>
+                  </ul>
+                </div>
+                
+                <div class="tab-pane fade" id="progress" role="tabpanel">
+                  <h3 class="h2 fw-bold mb-3">Theo dõi tiến độ học tập</h3>
+                  <p class="lead">Hệ thống báo cáo chi tiết giúp bạn biết được điểm mạnh và điểm cần cải thiện.</p>
+                  <ul class="feature-list">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Thống kê theo ngày/tuần/tháng</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Đề xuất lộ trình học</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Mục tiêu cá nhân hóa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="feature-showcase mt-5 mt-lg-0">
+              <div class="showcase-card active" data-tab="flashcards">
+                <img src="../assets/img/feature-flashcards.png" alt="Flashcard Feature" class="img-fluid rounded-4 shadow">
+              </div>
+              <div class="showcase-card" data-tab="pronunciation">
+                <img src="../assets/img/feature-pronunciation.png" alt="Pronunciation Feature" class="img-fluid rounded-4 shadow">
+              </div>
+              <div class="showcase-card" data-tab="progress">
+                <img src="../assets/img/feature-progress.png" alt="Progress Feature" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Cách WordMaster hoạt động</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px;">3 bước đơn giản để bắt đầu hành trình chinh phục tiếng Anh</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="step-card p-4 text-center h-100">
+              <div class="step-number">1</div>
+              <div class="step-icon mb-4">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <h3 class="h4 mb-3">Tạo tài khoản</h3>
+              <p>Đăng ký miễn phí trong 30 giây và thiết lập mục tiêu học tập của bạn</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="step-card p-4 text-center h-100">
+              <div class="step-number">2</div>
+              <div class="step-icon mb-4">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3 class="h4 mb-3">Chọn chủ đề</h3>
+              <p>Lựa chọn từ các bộ flashcard có sẵn hoặc tạo bộ từ vựng riêng của bạn</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="step-card p-4 text-center h-100">
+              <div class="step-number">3</div>
+              <div class="step-icon mb-4">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="h4 mb-3">Học thông minh</h3>
+              <p>Hệ thống sẽ tự động đề xuất lịch học tối ưu dựa trên khả năng ghi nhớ của bạn</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <a href="/auth/register.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold">
+            Bắt đầu học ngay <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Học viên nói gì về WordMaster</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px;">Hàng nghìn người đã cải thiện tiếng Anh với phương pháp của chúng tôi</p>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="testimonial-carousel owl-carousel owl-theme">
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-text">
+                    <p>"Tôi đã thử nhiều ứng dụng học tiếng Anh nhưng WordMaster thực sự khác biệt. Phương pháp flashcard thông minh giúp tôi nhớ từ vựng lâu hơn hẳn."</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <img src="../assets/img/testimonial-1.jpg" alt="Nguyễn Thị Hương" class="rounded-circle">
+                    <div class="author-info">
+                      <h5 class="mb-1">Nguyễn Thị Hương</h5>
+                      <p class="mb-0 text-muted">Sinh viên ĐH Ngoại Thương</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-text">
+                    <p>"Từ khi dùng WordMaster, khả năng phát âm của tôi được cải thiện rõ rệt. Công nghệ nhận diện giọng nói rất chính xác và hữu ích."</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <img src="../assets/img/testimonial-2.jpg" alt="Trần Văn Nam" class="rounded-circle">
+                    <div class="author-info">
+                      <h5 class="mb-1">Trần Văn Nam</h5>
+                      <p class="mb-0 text-muted">Nhân viên văn phòng</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="display-5 fw-bold mb-3">Sẵn sàng cải thiện tiếng Anh của bạn?</h2>
+            <p class="lead mb-lg-0">Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/auth/register.html" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold">
+              Đăng ký miễn phí <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer sẽ được load bằng JS -->
+  <div id="footer"></div>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Load header
+      fetch('../partials/header.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Không thể tải header');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+          // Khởi tạo các component Bootstrap sau khi load header
+          const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        })
+        .catch(error => console.error('Lỗi header:', error));
+
+      // Load footer
+      fetch('../partials/footer.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Không thể tải footer');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Lỗi footer:', error));
+
+      // Feature tabs interaction
+      const featureTabs = document.querySelectorAll('#features-tab button');
+      const showcaseCards = document.querySelectorAll('.showcase-card');
+      
+      featureTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetTab = this.getAttribute('data-bs-target').replace('#', '');
+          
+          showcaseCards.forEach(card => {
+            if (card.getAttribute('data-tab') === targetTab) {
+              card.classList.add('active');
+            } else {
+              card.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('show');
+        } else {
+          backToTopButton.classList.remove('show');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+
+      // Animate elements on scroll
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.step-card, .feature-showcase, .testimonial-item');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight - 100) {
+            element.classList.add('animate__animated', 'animate__fadeInUp');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll(); // Run once on load
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- frontend/views/flashcard/detail.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết Flashcard</title>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="card-title mb-4 text-center text-primary">Chi tiết Flashcard</h3>
+            <div class="mb-4">
+              <h5 class="text-muted">Mặt trước:</h5>
+              <p class="fs-5" id="frontText">Hello</p>
+            </div>
+            <div class="mb-4">
+              <h5 class="text-muted">Mặt sau:</h5>
+              <p class="fs-5" id="backText">Xin chào</p>
+            </div>
+            <div class="mb-4">
+              <h5 class="text-muted">Cấp độ:</h5>
+              <span class="badge bg-success" id="levelText">Beginner</span>
+            </div>
+            <div class="text-end">
+              <a href="list.html" class="btn btn-secondary"><i class="fas fa-arrow-left me-1"></i>Quay lại</a>
+              <button class="btn btn-warning ms-2"><i class="fas fa-edit me-1"></i>Chỉnh sửa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/loadPartials.js"></script>
+  <!-- Script giả lập dữ liệu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Giả lập dữ liệu chi tiết flashcard
+      const flashcard = {
+        front: "Hello",
+        back: "Xin chào",
+        level: "Beginner"
+      };
+
+      document.getElementById("frontText").textContent = flashcard.front;
+      document.getElementById("backText").textContent = flashcard.back;
+      document.getElementById("levelText").textContent = flashcard.level;
+      document.getElementById("levelText").classList.add(
+        flashcard.level === "Beginner" ? "bg-success" :
+        flashcard.level === "Intermediate" ? "bg-warning" : "bg-danger"
+      );
+    });
+  </script>
+</body>
+</html>

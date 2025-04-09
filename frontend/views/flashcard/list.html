@@ -1,0 +1,46 @@
+<!-- frontend/views/flashcard/list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách Flashcards</title>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Danh Sách Flashcards</h2>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm từ vựng..." />
+      </div>
+    </div>
+
+    <div class="row" id="flashcardList">
+      <!-- Flashcards sẽ được render ở đây -->
+      <div class="col-md-4 mb-4" v-for="card in flashcards">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Từ: Hello</h5>
+            <p class="card-text">Nghĩa: Xin chào</p>
+            <span class="badge bg-success">Beginner</span>
+          </div>
+          <div class="card-footer text-end">
+            <a href="detail.html?id=1" class="btn btn-sm btn-outline-primary">Chi tiết</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/loadPartials.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- frontend/views/flashcard/create.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tạo Flashcard</title>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Tạo Flashcard Mới</h2>
+    <form id="createFlashcardForm" class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <label for="front" class="form-label">Mặt trước (Từ/Ví dụ)</label>
+        <input type="text" class="form-control" id="front" name="front" required />
+      </div>
+      <div class="mb-3">
+        <label for="back" class="form-label">Mặt sau (Nghĩa/Ghi chú)</label>
+        <textarea class="form-control" id="back" name="back" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="level" class="form-label">Cấp độ</label>
+        <select class="form-select" id="level" name="level">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Tạo Flashcard</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/loadPartials.js"></script>
+</body>
+</html>

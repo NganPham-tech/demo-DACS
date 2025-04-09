@@ -1,0 +1,59 @@
+<!-- header.html -->
+<header class="sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="../views/index.html">
+          <img src="../assets/img/logo.png" alt="WordMaster Logo" height="40">
+          <span class="ms-2 fw-bold text-primary">WordMaster</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../views/index.html"><i class="fas fa-home me-1"></i> Trang chủ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-layer-group me-1"></i> Học tập
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/flashcard/list.html">Từ vựng</a></li>
+                <li><a class="dropdown-item" href="/grammar/list.html">Ngữ pháp</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/quiz/start.html">Kiểm tra</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/history.html"><i class="fas fa-history me-1"></i> Lịch sử</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <form class="d-none d-md-flex me-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                <button class="btn btn-outline-primary" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+            <div class="dropdown">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown">
+                <img src="../assets/img/user-avatar.png" alt="User" width="32" height="32" class="rounded-circle">
+                <span class="ms-1 d-none d-lg-inline">Tài khoản</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="/user/profile.html"><i class="fas fa-user me-2"></i>Hồ sơ</a></li>
+                <li><a class="dropdown-item" href="/user/saved.html"><i class="fas fa-bookmark me-2"></i>Đã lưu</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/auth/login.html"><i class="fas fa-sign-in-alt me-2"></i>Đăng nhập</a></li>
+                <li><a class="dropdown-item" href="/auth/register.html"><i class="fas fa-user-plus me-2"></i>Đăng ký</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
