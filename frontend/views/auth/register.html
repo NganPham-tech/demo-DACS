@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký - WordMaster</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <style>
+    .auth-section {
+      background: linear-gradient(135deg, rgba(214, 51, 132, 0.1) 0%, rgba(174, 62, 201, 0.1) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    .auth-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .auth-left {
+      background: linear-gradient(135deg, #d63384 0%, #ae3ec9 100%);
+      color: white;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .auth-right {
+      padding: 3rem;
+      background: white;
+    }
+    
+    .auth-logo {
+      width: 80px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .auth-title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .auth-form .form-control {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      margin-bottom: 1rem;
+    }
+    
+    .auth-form .form-control:focus {
+      border-color: #d63384;
+      box-shadow: 0 0 0 0.25rem rgba(214, 51, 132, 0.25);
+    }
+    
+    .btn-auth {
+      background: linear-gradient(135deg, #d63384 0%, #ae3ec9 100%);
+      border: none;
+      padding: 12px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    
+    .btn-auth:hover {
+      opacity: 0.9;
+    }
+    
+    .auth-divider {
+      position: relative;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .auth-divider::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #eee;
+      z-index: 1;
+    }
+    
+    .auth-divider span {
+      position: relative;
+      z-index: 2;
+      background: white;
+      padding: 0 10px;
+      color: #666;
+    }
+    
+    .social-login .btn {
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: 500;
+    }
+    
+    .auth-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    
+    .password-strength {
+      height: 5px;
+      background: #eee;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    
+    .password-strength-bar {
+      height: 100%;
+      width: 0;
+      transition: width 0.3s;
+    }
+    
+    .password-hints {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    
+    .password-hints ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0;
+    }
+    
+    .password-hints li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .password-hints li.valid {
+      color: #28a745;
+    }
+    
+    .password-hints li.valid::before {
+      content: "✓ ";
+    }
+  </style>
+</head>
+<body>
+  <section class="auth-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="auth-card">
+            <div class="row g-0">
+              <div class="col-lg-5 d-none d-lg-flex">
+                <div class="auth-left">
+                  <img src="../../assets/img/logo-white.png" alt="WordMaster" class="auth-logo">
+                  <h2 class="auth-title">Bắt đầu hành trình học tiếng Anh của bạn</h2>
+                  <p>Đăng ký ngay để trải nghiệm phương pháp học từ vựng hiệu quả nhất</p>
+                  <div class="mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="fas fa-check-circle me-2"></i>
+                      <span>Flashcard thông minh</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="fas fa-check-circle me-2"></i>
+                      <span>Luyện phát âm với AI</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-check-circle me-2"></i>
+                      <span>Lộ trình học cá nhân hóa</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="auth-right">
+                  <h2 class="auth-title text-center">Đăng ký tài khoản</h2>
+                  <form class="auth-form">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Họ" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Tên" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="password" class="form-control" id="password" placeholder="Mật khẩu" required>
+                      <div class="password-strength mt-2">
+                        <div class="password-strength-bar"></div>
+                      </div>
+                      <div class="password-hints">
+                        <ul>
+                          <li id="length">Ít nhất 8 ký tự</li>
+                          <li id="uppercase">Ít nhất 1 chữ hoa</li>
+                          <li id="number">Ít nhất 1 số</li>
+                          <li id="special">Ít nhất 1 ký tự đặc biệt</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                      <label class="form-check-label" for="agreeTerms">
+                        Tôi đồng ý với <a href="#" class="text-primary">Điều khoản dịch vụ</a> và <a href="#" class="text-primary">Chính sách bảo mật</a>
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-auth w-100">Đăng ký</button>
+                  </form>
+                  
+                  <div class="auth-divider">
+                    <span>Hoặc đăng ký bằng</span>
+                  </div>
+                  
+                  <div class="social-login d-flex gap-3">
+                    <a href="#" class="btn btn-outline-primary flex-grow-1">
+                      <i class="fab fa-google me-2"></i> Google
+                    </a>
+                    <a href="#" class="btn btn-outline-primary flex-grow-1">
+                      <i class="fab fa-facebook-f me-2"></i> Facebook
+                    </a>
+                  </div>
+                  
+                  <div class="auth-footer">
+                    <p>Đã có tài khoản? <a href="login.html" class="text-primary fw-bold">Đăng nhập ngay</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const passwordInput = document.getElementById('password');
+      const strengthBar = document.querySelector('.password-strength-bar');
+      const hints = {
+        length: document.getElementById('length'),
+        uppercase: document.getElementById('uppercase'),
+        number: document.getElementById('number'),
+        special: document.getElementById('special')
+      };
+      
+      passwordInput.addEventListener('input', function() {
+        const password = this.value;
+        let strength = 0;
+        
+        // Reset hints
+        Object.values(hints).forEach(hint => {
+          hint.classList.remove('valid');
+        });
+        
+        // Check password length
+        if (password.length >= 8) {
+          strength += 25;
+          hints.length.classList.add('valid');
+        }
+        
+        // Check for uppercase letters
+        if (/[A-Z]/.test(password)) {
+          strength += 25;
+          hints.uppercase.classList.add('valid');
+        }
+        
+        // Check for numbers
+        if (/[0-9]/.test(password)) {
+          strength += 25;
+          hints.number.classList.add('valid');
+        }
+        
+        // Check for special characters
+        if (/[^A-Za-z0-9]/.test(password)) {
+          strength += 25;
+          hints.special.classList.add('valid');
+        }
+        
+        // Update strength bar
+        strengthBar.style.width = strength + '%';
+        
+        // Update bar color
+        if (strength < 50) {
+          strengthBar.style.backgroundColor = '#dc3545';
+        } else if (strength < 75) {
+          strengthBar.style.backgroundColor = '#ffc107';
+        } else {
+          strengthBar.style.backgroundColor = '#28a745';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
