@@ -4,7 +4,6 @@ const app = express();
 
 // Cấu hình static files
 app.use(express.static(path.join(__dirname, '../frontend')));
-app.use('/partials', express.static(path.join(__dirname, '../frontend/partials')));
 
 // Route cho các trang
 app.get('/', (req, res) => {
@@ -15,9 +14,19 @@ app.get('/auth/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/views/auth/login.html'));
 });
 
+// Trang danh sách flashcard
+app.get('/flashcard/list', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/views/flashcard/list.html'));
+});
+
+// Trang tạo flashcard
+app.get('/flashcard/create', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/views/flashcard/create.html'));
+});
+
 // Thêm các route khác tương tự
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server đang chạy trên  ${PORT}`);
 });
